@@ -22,7 +22,7 @@ float distance(vector<Vec4i>, Mat, int, int);
 int main()
 {
 	// Open the video file
-	cv::VideoCapture capture("C:\\\Temp\\\weld.mp4");
+	VideoCapture capture("C:\\\Temp\\\weld.mp4");
 	// check if video successfully opened
 	if (!capture.isOpened()) 
 	{
@@ -64,7 +64,7 @@ int main()
 		if (time >= pos)
 		{
 			// convert to gray scale
-			cvtColor(frame, gray_frame, cv::COLOR_BGR2GRAY);
+			cvtColor(frame, gray_frame, COLOR_BGR2GRAY);
 			//Gaussian filter
 			GaussianBlur(gray_frame, gauss_frame, Size(9, 9), 0, 0);
 			//Threshold process
